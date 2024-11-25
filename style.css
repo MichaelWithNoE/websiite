@@ -22,7 +22,6 @@ html, body {
   height: auto;
   z-index: 0; /* Keep the room image on top */
   pointer-events: none; /* Prevent this image from capturing mouse events */
-  transform:translateY(-8vh);
 }
 .page1floating {
   -webkit-filter: brightness(100%);
