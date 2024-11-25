@@ -13,6 +13,9 @@ function isPixelOpaque(x, y, image) {
     const adjustedX = Math.floor(x * scaleX);
     const adjustedY = Math.floor(y * scaleY);
 
+
+    
+
     ctx.drawImage(image, 0, 0, image.naturalWidth, image.naturalHeight); // Corrected property names
     const pixel = ctx.getImageData(adjustedX, adjustedY, 1, 1).data;
 
