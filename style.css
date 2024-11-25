@@ -1,0 +1,319 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.image{
+  position: fixed; /* Set the container as a positioning context */
+  width: 100%; /* Make it responsive to the viewport */
+  position:fixed;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+
+
+.page1background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Align both images */
+  height: auto;
+  z-index: 0; /* Keep the room image on top */
+  pointer-events: none; /* Prevent this image from capturing mouse events */
+  transform:translateY(-8vh);
+}
+.page1floating {
+  -webkit-filter: brightness(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match dimensions with the room image */
+  height: auto;
+  z-index: 1; /* Place behind the room image */
+  pointer-events: auto; /* Allow interaction */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover transitions */
+  transform:translateY(-8vh);
+  /* Clip to visible screen area */
+  clip-path: polygon(44% 61.1%,  49.6% 62.6%,  48.7%   72.3% , 43.1%  70.8% ); /* Adjust these points */
+}
+
+.hoverfx:hover {
+  -webkit-filter: brightness(20%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+
+.page2background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Align both images */
+  height: auto;
+  z-index: 0; /* Keep the room image on top */
+  pointer-events: none; /* Prevent this image from capturing mouse events */
+}
+
+.page2floating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match dimensions with the room image */
+  height: auto;
+  z-index: 1; /* Place behind the room image */
+  pointer-events: auto; /* Allow interaction */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover transitions */
+
+  /* Clip to visible screen area */
+  clip-path: polygon(31.4% 27.2%, 56.9% 22.5%, 56.3% 53.2%, 32.6% 61.5%); /* Adjust these points */
+}
+
+
+.page3background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Align both images */
+  height: auto;
+  z-index: 0; /* Keep the room image on top */
+  pointer-events: none; /* Prevent this image from capturing mouse events */
+}
+
+#overlay {
+  position: fixed; /* Covers the entire viewport */
+  display:block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity:0;
+  background-color: rgba(0, 0, 0, 1); /* Semi-transparent black */
+  z-index: 300; /* Ensure it's on top of other elements */
+  pointer-events: none;
+  transition: opacity 1.8s ease-in;
+}
+
+.page3floating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match dimensions with the room image */
+  height: auto;
+  z-index: 1; /* Place behind the room image */
+  pointer-events: auto; /* Allow interaction */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover transitions */
+
+  /* Clip to visible screen area */
+  clip-path: polygon(57.9% 63.7%, 62.5% 67.3%, 60.9% 76%, 56.2% 72.4%); /* Adjust these points */
+}
+
+
+
+.page4background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Align both images */
+    height: auto;
+    z-index: 0; /* Keep the room image on top */
+    pointer-events: none; /* Prevent this image from capturing mouse events */
+    opacity:1;
+}
+
+.page4floating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match dimensions with the room image */
+  height: auto;
+  z-index: 1; /* Place behind the room image */
+  pointer-events: auto; /* Allow interaction */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover transitions */
+
+  /* Clip to visible screen area */
+  clip-path: polygon(29.8% 20.4%, 47% 20.4%, 47% 25.8%, 29.8% 25.8%); /* Adjust these points */
+}
+
+.pulsing{
+  animation: fadeInOut 2.5s infinite ease-in-out;
+  
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.2; /* Start with low opacity */
+    scale:1;
+  }
+  50% {
+    opacity: 0.8; /* Fully visible */
+    scale: 1.01;
+  }
+  100% {
+    opacity: 0.2; /* Fade back to low opacity */
+    scale:1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.page5wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match dimensions with the container */
+  height: auto;
+  clip-path: polygon(4.6% 35%, 24.2% 35%, 24.2% 60.7%, 23.6% 60.7%, 23% 61.9%, 23% 65.6%, 21.9% 65.6%, 21.5% 58.9%, 13.2% 58.9%, 12.9% 58.3%, 4.6% 58.2%);
+  z-index: 1;
+  pointer-events: auto; /* Allow interaction */
+}
+
+.page5floating {
+  display: block; /* Ensure proper layout */
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+}
+
+.page5wrapper:hover .page5floating {
+  transform: translateY(-6vw) translateX(3.7vw) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.page5floating {
+  display: block; /* Ensure proper layout */
+  width: 100%;
+  height: auto;
+}
+
+
+.pinwheel {
+  position: fixed; /* or fixed, depending on your requirement */
+  display:block;
+  width: 100%; /* Adjust the size of the image */
+  z-index: 0;
+  top: -25%; /* 50% down from the top of the container */
+  left: -35%; /* 20% in from the left of the container */
+  scale:100%;
+  /* Animation for spinning */
+  animation: spin 11s linear infinite;
+}
+
+.pinwheel2{
+  position: fixed; /* or fixed, depending on your requirement */
+  display:block;
+  width: 100%; /* Adjust the size of the image */
+  z-index: 0;
+  top: -25%; /* 50% down from the top of the container */
+  left: -35%; /* 20% in from the left of the container */
+  scale:100%;
+  /* Animation for spinning */
+  animation: spin2 21s linear infinite;
+  scale: 300%;
+
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+      opacity:0.5;
+  }
+  to {
+      transform: rotate(180deg);
+      opacity:0.3;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity:0.5;
+}
+}
+
+@keyframes spin2 {
+  from {
+      transform: rotate(0deg);
+      opacity:0.2;
+  }
+  to {
+      transform: rotate(180deg);
+      opacity:0.1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity:0.2;
+}
+}
+
+
+
+
+
+
+
+
+
+
+.instrument {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Same dimensions as the background */
+  height: auto;
+  pointer-events: auto; /* Allows clicking on these images */
+  z-index: 2; /* Layer on top of the background */
+  animation: fadeinout 0.1s linear infinite;
+  
+}
+
+@keyframes fadeinout {
+  from {
+      opacity:0.5;
+  }
+  to {
+      opacity:1;
+  }
+  to {
+      opacity:0.5;
+  }
+}
+.i1{
+  filter: drop-shadow(0 0 20px #ffd5007f) drop-shadow(0 0 40px #ff880044);
+}
+.i2{
+  filter: drop-shadow(0 0 20px #00ff377f) drop-shadow(0 0 40px #00ff5144);
+}
+.i3{
+  filter: drop-shadow(0 0 20px #2f00ff7f) drop-shadow(0 0 40px #2f00ff44);
+}
+.i4{
+  filter: drop-shadow(0 0 20px #ff00007f) drop-shadow(0 0 40px #ff000044);
+}
+.i5{
+  filter: drop-shadow(0 0 20px #9500ff7f) drop-shadow(0 0 40px #7b00ff44);
+}
+.i6{
+  filter: drop-shadow(0 0 20px #ff00e17f) drop-shadow(0 0 40px #ff00fb44);
+}
+.i7{
+  filter: drop-shadow(0 0 20px #0800ff7f) drop-shadow(0 0 40px #0800ff44);
+}
+.i8{
+  filter: drop-shadow(0 0 20px #b7ff007f) drop-shadow(0 0 40px #d0ff0044);
+}
+.i9{
+  filter: drop-shadow(0 0 20px #00fff27f) drop-shadow(0 0 40px #00ffd944);
+}

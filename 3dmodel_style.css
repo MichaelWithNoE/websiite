@@ -1,0 +1,44 @@
+#showModelBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#model-container {
+    position: fixed;
+    bottom: -100%; /* Initially hide the container off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: bottom 1s ease-in-out;
+    z-index: 5;
+}
+
+#canvas-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:5;
+    
+}
+
+/* Show the container when active */
+#model-container.active {
+    bottom: 0;
+    z-index: 5;
+}
+
+canvas {
+    pointer-events: none; 
+    position:fixed;
+}
