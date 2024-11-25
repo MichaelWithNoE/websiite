@@ -3,7 +3,14 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="3dmodel_style.css">
-  
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three/build/three.module.js",
+        "three/examples/jsm/loaders/OBJLoader": "https://unpkg.com/three/examples/jsm/loaders/OBJLoader.js"
+      }
+    }
+  </script>
 </head>
 
 
@@ -13,14 +20,7 @@
 
 <body>
   <script type="module" src="main.js"></script>
-
-<script type="importmap">
-	{
-		"imports": {
-			"three": "https://unpkg.com/three/build/three.module.js"
-		}
-	}
-</script>
+  
 
 
 
@@ -31,27 +31,22 @@
     <img src="img/Artboard3.jpg" class="page3floating hoverfx" alt="Trigger">
   </a>
 
-  <!-- If using THREE.js then use this-->
+<!--If using THREE.js then use this-->
    
-  
   <a href="page4.html"> 
     <div id="overlay"></div></a>
 </div>
- 
 
-<!-- If not using THREE.js then use this 
+
+<!-- If not using THREE.js then use this
 <a href="page4.html">
   <img src="img/Artboard3.jpg" class="page3floating hoverfx" alt="Trigger">
 </a>
 !-->
 
 
-
 <a href="page2.html"> </a>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
-<script src="script.js"></script>
+
 
 
 
